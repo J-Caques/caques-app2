@@ -1,0 +1,77 @@
+@startuml
+'https://plantuml.com/class-diagram
+class InventoryManagmentApplication{}
+
+class ItemEntry{
+      +ItemEntry(String serialNumber,String name,String value)
+}
+
+class AddInventory{
+    -addItem()
+}
+
+class RemoveInventory{
+
+    -removeItem()
+}
+
+class ClearInventory{
+    -clear
+}
+
+class EditInventory{
+    -editName()
+    -editValue()
+    -editSerialNumber()
+}
+
+class SortInventory{
+    -byName();
+    -byValue();
+    -bySerialNumber();
+}
+
+class SearchInventory{
+    -search()
+}
+
+class SavetoFile{
+    +save()
+}
+
+class TSV{
+    -convertToTsv()
+    -saveTsvFile()
+}
+
+class HTML{
+    -convertToHtml()
+    -saveHtmlFile()
+}
+
+class JSON{
+    -convertToJson()
+    -saveJsonFile()
+}
+
+class LoadFile{
+    -load()
+}
+
+InventoryManagmentApplication --> AddInventory
+InventoryManagmentApplication --> RemoveInventory
+InventoryManagmentApplication --> ClearInventory
+InventoryManagmentApplication --> EditInventory
+InventoryManagmentApplication --> SortInventory
+InventoryManagmentApplication --> SearchInventory
+InventoryManagmentApplication --> SavetoFile
+SavetoFile -- TSV
+SavetoFile -- HTML
+SavetoFile -- JSON
+LoadFile -- TSV
+LoadFile -- HTML
+LoadFile -- JSON
+ItemEntry -- AddInventory
+ItemEntry -- RemoveInventory
+ItemEntry -- SearchInventory
+@enduml
