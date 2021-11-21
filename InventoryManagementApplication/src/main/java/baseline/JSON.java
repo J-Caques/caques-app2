@@ -1,7 +1,15 @@
 package baseline;
+import com.google.gson.Gson;
+
+import java.util.List;
 
 public class JSON {
-    convertToJson(){
+
+    void convertToJSON(List<ItemEntry> a) {
+        Gson gson = new Gson();
+        String jsonEntry = gson.toJson(a);
+    }
+    //convertToJson(){}
        /*
             AddInventory Object to access inventory list
             List<ItemEntry> Inventory = object.getList();
@@ -9,12 +17,12 @@ public class JSON {
             Convert that list into a Json formatted file
         */
 
-    }
 
-    saveJsonFile(){
+
+    //saveJsonFile(){}
         /*
             save file to computer
          */
 
-    }
+
 }

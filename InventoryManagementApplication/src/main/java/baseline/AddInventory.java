@@ -1,29 +1,32 @@
 package baseline;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+/*
+ *  UCF COP3330 Fall 2021 Application Assignment 2 Solution
+ *  Copyright 2021 Jonathan Caques
+ */
 
-public class AddInventory {
+import java.util.*;
+
+public class AddInventory extends Inventory {
 
     //Method that adds items to inventory list
-    void add(){
+    List<ItemEntry> addItem() {
 
+        //Prompt user for serialNumber, name, and value
+        System.out.println("Item's Serial Number: ");
+        Scanner input1 = new Scanner(System.in);
+        String serialNumber = input1.next();
+        System.out.println("Item's Name: ");
+        Scanner input2 = new Scanner(System.in);
+        String name = input2.nextLine();
+        System.out.println("Item's value: ");
+        Scanner input3 = new Scanner(System.in);
+        String value = input3.next();
+
+
+        add(new ItemEntry(serialNumber, name, value));
+        return getInventory();
     }
-        /*
-            Prompt user: "Enter Item's serial number, followed by its name and value."
-            Use scanner to save user input to variables serialNumber, name, and value
-
-            Make a list of the ItemEntry type
-            List<ItemEntry> Inventory = new ArrayList<>;
-            By defining data type, items w/ multiple values can be saved into a single element of a list
-            Inventory.add(new ItemEntry (serialNumber, name, value)
-
-            create a List<ItemEntry> getList() method so that Inventory can be accessed to other classes {
-                return Inventory;
-            }
-         */
-
-    }
+}
 
 

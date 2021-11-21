@@ -7,14 +7,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000080#000080;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="baseline.InventoryScreen">
    <children>
       <HBox prefHeight="48.0" prefWidth="600.0" spacing="10.0">
          <children>
-            <Button mnemonicParsing="false" text="+" />
-            <Button mnemonicParsing="false" text="-" />
-            <Button mnemonicParsing="false" text="Clear" />
+            <Button mnemonicParsing="false" onMouseClicked="#addItemButton" text="+" />
+            <Button mnemonicParsing="false" onAction="#removeItemButton" onMouseClicked="#removeItemButton" text="-" />
+            <Button mnemonicParsing="false" onMouseClicked="#clearInventoryButton" text="Clear" />
             <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="43.0" text="Edit">
                <HBox.margin>
                   <Insets left="350.0" />

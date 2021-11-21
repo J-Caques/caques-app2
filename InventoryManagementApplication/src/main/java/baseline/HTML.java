@@ -2,7 +2,7 @@ package baseline;
 
 public class HTML {
     //Method to take convert an existing list to an HTML file
-    converttoHTML(){
+    //converttoHTML(){
 
      /*
         AddInvetory Object to access Inventory List
@@ -10,7 +10,8 @@ public class HTML {
       */
  }
 
-    saveHtmlFile(){
+    //saveHtmlFile(){}
         //Saves content into a html file
-    }
-}
+
+
+

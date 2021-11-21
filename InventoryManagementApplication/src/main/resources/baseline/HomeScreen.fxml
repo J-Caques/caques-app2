@@ -15,7 +15,7 @@
    <children>
       <HBox prefHeight="43.0" prefWidth="600.0" spacing="30.0" AnchorPane.bottomAnchor="357.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button mnemonicParsing="false" text="New" />
+            <Button mnemonicParsing="false" onMouseClicked="#handleButtonAction" text="New" />
             <Button mnemonicParsing="false" text="Load" />
          </children>
          <padding>
@@ -24,7 +24,7 @@
       </HBox>
       <ImageView fitHeight="276.0" fitWidth="559.0" layoutX="24.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../background/InventoryBackground.jpeg" />
+            <Image url="@../Background/InventoryBackground.jpeg" />
          </image>
       </ImageView>
       <Text fill="#fcfcfc" layoutX="96.0" layoutY="194.0" stroke="#0d0d0d" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="5.0" style="-fx-font-family: Century Gothic, sans-serif;" text="Inventory&#10;            Menu">

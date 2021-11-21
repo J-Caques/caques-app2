@@ -1,52 +1,78 @@
 package baseline;
 
+/*
+ *  UCF COP3330 Fall 2021 Application Assignment 2 Solution
+ *  Copyright 2021 Jonathan Caques
+ */
+
+import java.util.Scanner;
+
 public class EditInventory {
 
-    /*
-        method edits the name of an item
-        editName(){
-          AddInventory object
-          Pull Inventory List from AddInventory
-          List<ItemEntry> Inventory = object.getlist()
+    //Creating MainInventory object to access its arrayList
+    Inventory main = new Inventory();
 
-          Prompt user: "Name of original Item: "
-          Use Scanner to input to variable name
 
-          Search for index that contain the original name
-          int index = Inventory.indexOf(name);
+        //method edits the name of an item
+        void editName(){
+            //Prompt user for original name of item
+            System.out.println("Item's original name: ");
+                Scanner input = new Scanner(System.in);
+                String name = input.nextLine();
+            //Prompt user for the new name
+            System.out.println("Enter new name: ");
+                Scanner input2 = new Scanner(System.in);
+                String newName = input2.nextLine();
 
-          Prompt User: "Enter new name: "
-          Scanner to save input to name variable
-          Inventory.add(index, name)
+
+        //Finds the index that contains the variable name in its string
+        int i = main.findByName(main.getInventory(), name);
+        //Goes to that index, and sets it with the new name
+        main.getInventory().get(i).setName(newName);
        }
 
-       Method that edits the value of an item
-       editValue(){
-        AddInventory Object
-        List<ItemEntry> Inventory = Object.getList()
+       //Method that edits the value of an item
+       void editValue(){
+           //Prompt user for name of the item
+           System.out.println("Item's name: ");
+            Scanner input = new Scanner(System.in);
+            String name = input.nextLine();
+           //Prompt user for original value
+           System.out.println("Enter Item's original value: ");
+            Scanner input2 = new Scanner(System.in);
+            String value = input2.nextLine();
+           //Prompt user for the new value
+           System.out.println("Enter new value: ");
+            Scanner input3 = new Scanner(System.in);
+            String value2 = input3.nextLine();
 
-        Prompt user: "Enter original value: "
-        String value = input.line()
-        int index = Inventory.indexOf(value)
-
-        Prompt user:"Enter new value: "
-        value = input2.line();
-        Inventory.add(index, value);
+            //Finds the index that contains the variable name in its string
+            int i = main.findByName(main.getInventory(), name);
+            //Goes to that index, and sets it with a new name
+            main.getInventory().get(i).setValue(value2);
        }
 
-       Method to edit Item's serial number
-       editSerialNumber(){
-       AddInventory Object
-        List<ItemEntry> Inventory = Object.getList()
+       //Method to edit Item's serial number
+       void editSerialNumber(){
+           //Prompt user for name of the item
+           System.out.println("Item's name: ");
+            Scanner input = new Scanner(System.in);
+            String name = input.nextLine();
+           //Prompt user for original value
+           System.out.println("Enter Item's original serial number: ");
+            Scanner input2 = new Scanner(System.in);
+            String serialNumber = input2.nextLine();
+           //Prompt user for the new value
+           System.out.println("Enter new serial number: ");
+            Scanner input3 = new Scanner(System.in);
+            String serialNumber2 = input3.nextLine();
 
-        Prompt user: "Enter original serial number: "
-        String serialNumber = input.line()
-        int index = Inventory.indexOf(serialNumber)
 
-        Prompt user:"Enter new value: "
-        serialNumber = input2.line();
-        Inventory.add(index, serialNumber);
+           //Finds the index that contains the variable name in its string
+           int i = main.findByName(main.getInventory(), name);
+           //Goes to that index, and sets it with a new name
+           main.getInventory().get(i).setSerialNumber(serialNumber2);
        }
 
-     */
+
 }

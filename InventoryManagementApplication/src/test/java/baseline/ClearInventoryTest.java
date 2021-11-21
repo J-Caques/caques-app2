@@ -1,5 +1,4 @@
 package baseline;
-
 /*
  *  UCF COP3330 Fall 2021 Application Assignment 2 Solution
  *  Copyright 2021 Jonathan Caques
@@ -8,9 +7,13 @@ package baseline;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class AddInventoryTest {
+
+class ClearInventoryTest {
+
     @Test
-    void add(){
+    void clear(){
+
+
         String serialNumber = "A-123-4B5-6C7";
         String name = "PS5";
         String value = "$500";
@@ -23,12 +26,10 @@ class AddInventoryTest {
         main.inventory.add(new ItemEntry(serialNumber,name,value));
         main.inventory.add(new ItemEntry(serialNumber2,name2,value2));
 
-        System.out.println(main.inventory.get(0));
-        System.out.println(main.inventory.get(1));
-        System.out.println(main.inventory);
+        main.inventory.clear();
 
-        Assertions.assertTrue(main.inventory.size() == 2);
-
-
+        //Assures that inventory is cleared out
+        Assertions.assertTrue(main.inventory.size() == 0);
     }
+
 }

@@ -1,17 +1,20 @@
 package baseline;
 
+/*
+ *  UCF COP3330 Fall 2021 Application Assignment 2 Solution
+ *  Copyright 2021 Jonathan Caques
+ */
+
+import java.util.List;
+
 public class ClearInventory {
 
-    /*
-        The clear method will clear the entire Inventory List
-        clear(){
-         Create AddInventory Object
-         AddInventory currentInventory = new AddInventory();
 
-         Access ArrayList from that method
-         List<ItemEntry> Inventory = currentInventory.getList();
+        //Clears entire inventory list
+        void clear(List<ItemEntry> a){
 
-         Inventory.clear to clear inventory
+            //Clear inventory list
+            a.clear();
+
         }
-     */
 }
